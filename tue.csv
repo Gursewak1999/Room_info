@@ -1,0 +1,21 @@
+room ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9
+101 ,Chemistery ,Maths ,free ,FCPIT ,recess ,Physics ,free ,Maths ,Physics
+102 ,free ,FCPIT ,EEE ,ED ,recess ,Chemistery ,Chemistery ,Chemistery ,Maths
+103 ,English ,EME ,Maths ,free ,recess ,free ,Physics ,Physics ,FCPIT
+104 ,EEE ,free ,Physics ,EEE ,recess ,EEE ,Maths ,free ,EME
+105 ,ED ,FCPIT ,Chemistery ,Maths ,recess ,ED ,FCPIT ,FCPIT ,free 
+201 ,EME ,ED ,free ,English ,recess ,EME ,English ,English ,FCPIT
+202 ,English ,free ,English ,Physics ,recess ,English ,EME ,EME ,ED
+203 ,free ,EEE ,EEE ,Chemistery ,recess ,Physics ,free ,free ,free 
+204 ,Chemistery ,Maths ,ED ,free ,recess ,Chemistery ,FCPIT ,free ,EEE
+205 ,Physics ,Physics ,EME ,EEE ,recess ,free ,ED ,ED ,Maths
+301 ,Maths ,Chemistery ,English ,ED ,recess ,Maths ,free ,free ,Physics
+302 ,FCPIT ,free ,free ,EME ,recess ,FCPIT ,EEE ,EEE ,Chemistery
+303 ,EME ,English ,Chemistery ,English ,recess ,English ,Maths ,Maths ,free 
+304 ,free ,EEE ,Physics ,free ,recess ,EME ,Physics ,Physics ,English
+305 ,FCPIT ,ED ,Maths ,Chemistery ,recess ,free ,Chemistery ,Chemistery ,EEE
+401 ,ED ,EME ,FCPIT ,Physics ,recess ,FCPIT ,free ,free ,ED
+402 ,free ,English ,EME ,Maths ,recess ,ED ,EEE ,free ,EME
+403 ,EEE ,free ,free ,FCPIT ,recess ,free ,ED ,ED ,English
+404 ,Maths ,hemistery ,FCPIT ,EME ,recess ,EEE ,EME ,EME ,free 
+405 ,Physics ,Physics ,ED , free ,recess ,Maths ,English ,English ,Chemistery
