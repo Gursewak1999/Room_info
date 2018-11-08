@@ -1,5 +1,4 @@
 #include <time.h>
-#include <stdlib.h>
 #include <stdio.h>
 #include <conio.h>
 #include <string.h>
@@ -26,10 +25,8 @@ int period() {
 
     /* Convert to local time format. */
     c_time_string = ctime(&current_time);
- //   printf("Current time is %s", c_time_string);
 
     sscanf(c_time_string,"%s %s %s %d:%d:%d ",&_day,&_dump,&_dump,&hr,&min,&sec);
- //   printf("%s\n%d\n%d\n%d",_day,hr,min,sec);
       if(hr<9)
       {
       clrscr();
@@ -63,6 +60,7 @@ int period() {
       }
       else
       return 0;
+      return 0;
 }
 int per = 0;
 
@@ -70,7 +68,6 @@ lecture()
 {
 	  // error code swth01
        printf("\n\nIts ");
-    //   printf("debug Period() = %d",period());
        switch(period())
        {
 	 case 1: printf("1st ");
@@ -104,7 +101,7 @@ lecture()
 	 case 0: printf("Not yet any Lecture going on please come in college hours.");
 		 per = 0;
 		 delay(5000);
-//TODO		 exit(0);
+		 exit(0);
 		 break;
 	 default : printf("\n*********************\terror code - swth01\n*********************\n");
 
@@ -128,7 +125,7 @@ check_db()
      else  if(strcmp(_day,"Wed")==0)
 	 file = fopen("wed.csv","r");
      else  if(strcmp(_day,"Thu")==0)
-	 file = fopen("thu.csv","r");
+	 file = fopen("thus.csv","r");
      else  if(strcmp(_day,"Fri")==0)
 	 file = fopen("fri.csv","r");
      else printf("Error Selecting Days. Please send this code(swthfl001) to developer @--guru.dhindsa9999@gmail.com");
@@ -136,16 +133,9 @@ check_db()
       //add data to strings
       for(i=0;i<=20;i++)
       for(j=0;j<=9;j++)
-	  fscanf(file,"%s",_x[i][j]);
-
-    /*   for(i=0;i<=20;i++)
-       {
-	 for(j=0;j<=9;j++)
-	 {
-	    if(strcmp(_x[i][j],",free")==0)
-	    printf("\nroom = %d ,period = %d",i+1,j);
+	{  fscanf(file,"%s",_x[i][j]);
 	 }
-       }   */
+
        fclose(file);
        empty(per);
       return 0;
@@ -163,11 +153,10 @@ int empty(int period)
 	 } else
       {
      //to check for empty rooms
-for(i=0;i<=20;i++)
+	   for(i=0;i<=20;i++)
      {         j=period;
 	    if((strcmp(_x[i][j],",free")==0))
 	     {
-	  //   printf("\nroom = %d ,period = %d",i+1,j);
 	     switch(i+1)
     {
       case 1 : printf("\nRoom no. 101");
@@ -220,7 +209,7 @@ for(i=0;i<=20;i++)
 room_info()
 {     int f,r,num;
 
-     printf("\n\n\n\t\t\tFor Further Information and MAP correspondancen\n\t\t Please enter the room Number Below :::: \n::  ");
+  A :   printf("\n\n\n\t\tFor Further Information and MAP correspondance\n\t\t Please enter the room Number Below :::: \n\t\tOr press 0 to exit::  ");
      scanf("%d",&num);
      switch(num)
     {
@@ -284,6 +273,10 @@ room_info()
       case 405 :
 		f=4; r=5;
 	       break;
+      case 0 : exit(0);
+      default : textcolor(4);
+		cprintf("\r\nPlease enter a valid input.");
+		goto A;
    }
       map_select(f,r);
 
@@ -441,7 +434,6 @@ map_select(int f,int r)
 
 void initialise()
 {            int i;
-       //        printf("\t%d",lecture());
 	 notice();
 	 getch();
 	 clrscr();
